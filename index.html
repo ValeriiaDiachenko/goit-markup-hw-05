@@ -20,7 +20,7 @@
         <nav class="header-nav">
             <a href="./index.html" lang="en" class="link  logo"><span>Web</span>Studio</a>
         <ul class="list navigation-list">
-            <li class="nav-item"><a href="./index.html" class="link nav-list">Студия</a></li>
+            <li class="nav-item"><a href="./index.html" class="link nav-list current-page">Студия</a></li>
             <li class="nav-item"><a href="./portfolio.html" class="link nav-list">Портфолио</a></li>
             <li class="nav-item"><a href="" class="link nav-list">Контакты</a></li>
         </ul>
@@ -40,7 +40,7 @@
         <section class="hero-section">
             <div class="container">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" name="Заказать услугу" class="hero-button">Заказать услугу</button>
+            <button type="button" name="Заказать услугу" class="hero-button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--Section Our Activities-->
@@ -87,13 +87,16 @@
         <h2 class="activities-title">Чем мы занимаемся</h2>
         <ul class="list activities-list">
             <li class="activities-list-item">
-            <img src="./images/box1.jpg" alt="Проектирование сайтов" width="370" height="294">
+                <h3 class="activities-overlay-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+            <img src="./images/box1.jpg" alt="Десктопные приложения" width="370" height="294">
             </li>
             <li class="activities-list-item">
-            <img src="./images/box2.jpg" alt="Разработка мобильного приложения" width="370" height="294">
+                <h3 class="activities-overlay-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
+            <img src="./images/box2.jpg" alt="Мобильные приложения" width="370" height="294">
             </li>
             <li class="activities-list-item">
-            <img src="./images/box3.jpg" alt="Цветовое оформление" width="370" height="294">
+                <h3 class="activities-overlay-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
+            <img src="./images/box3.jpg" alt="Дизайнерские решения" width="370" height="294">
             </li>
         </ul>
         </div>
@@ -307,6 +310,18 @@
 
             </ul>
         </section>
+        <div class="backdrop" data-modal>
+            <div class="modal">
+                <div class="modal-icon">
+                    <button type="button" name="" class="close-modal-button" data-modal-close>
+                        <svg class="close-icon" width="11" height="11">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg></button>
+                    
+                </div>
+
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container footer-container">
@@ -356,6 +371,6 @@
         </ul></div>
         </div>
     </footer>
-
+<script src="./js/modal.js"></script>
 </body>
 </html>
