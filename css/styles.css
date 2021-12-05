@@ -154,6 +154,9 @@ img {
 }
 .contact-icon {
   margin-right: 10px;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--transition-timing-function);
 }
 /*--------------HERO----------------------------*/
 .hero-section {
@@ -433,6 +436,7 @@ img {
   opacity: 0;
   pointer-events: none;
 }
+
 .modal {
   width: 528px;
   height: 581px;
@@ -463,6 +467,7 @@ img {
 .modal {
   position: relative;
 }
+
 /*---------------------------------------Footer-----------------*/
 .footer {
   background-color: #2f303a;
@@ -625,8 +630,9 @@ img {
   flex-wrap: wrap;
   margin-top: -30px;
 }
-.card {
+.card-thumb {
   position: relative;
+  overflow: hidden;
 }
 
 .box-content {
@@ -636,36 +642,28 @@ img {
   padding-top: 20px;
   border: 1px solid #eeeeee;
 }
-.card-thumb::before {
+
+.card-text {
   display: inline-block;
   position: absolute;
-  content: "";
+  top: 0;
+  left: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-top: 63px;
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-
-
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: var(--transition-timing-function);
-}
-.card-thumb:hover::before,
-.card-thumb:focus::before {
-  opacity: 1;
-}
-.card-text {
-  opacity: 0;
-  display: inline-block;
-  position: absolute;
   font-weight: 400;
   font-size: 18px;
-  line-height: 15.6;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--transition-timing-function);
 }
-.card-thumb:focus:.card-text,
-.card-thumb:hover:.card-text {
-  opacity: 1;
-  z-index: 4;
+
+.list-box:hover .card-text {
+  transform: translateY(0);
 }
